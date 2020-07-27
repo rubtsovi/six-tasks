@@ -1,7 +1,5 @@
 const duplicate = function () {
-  const newArray = new Array(...this);
-  newArray.push(...this);
-  return newArray;
+  return this.concat(this);
 };
 
 Array.prototype.duplicate = duplicate;
